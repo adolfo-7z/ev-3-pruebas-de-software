@@ -1,0 +1,11 @@
+stages:
+  - test
+
+test:
+  image: node:latest
+  stage: test
+  script:
+    # install dependencies
+    - npm ci
+    # run Cypress tests
+    - npm run e2e
