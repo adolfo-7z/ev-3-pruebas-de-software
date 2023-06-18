@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"e2e": "cypress run"
+		"e2e": "cypress run --headless"
 	},
 	"keywords": [],
 	"author": "",
