@@ -19,7 +19,7 @@ describe("Home E2E", () => {
 
 		cy.visit("/");
 
-		cy.wait(5000);
+		cy.wait(3000);
 
 		cy.get("div")
 			.find(".q-notification")
@@ -83,13 +83,13 @@ describe("Home E2E", () => {
 
 		cy.visit("/");
 
-		cy.wait(5000);
+		cy.wait(3000);
 
 		cy.get(".block")
 		.contains("block")
 		.click();
 
-		cy.wait(5000);
+		cy.wait(3000);
 
 		cy.get("div")
 		.find("#user.q-item")
@@ -106,13 +106,13 @@ describe("Home E2E", () => {
 
 		cy.visit("/");
 
-		cy.wait(5000);
+		cy.wait(3000);
 
 		cy.get(".block")
 		.contains("unblock")
 		.click();
 
-		cy.wait(5000);
+		cy.wait(3000);
 
 		cy.get("div")
 		.find("#user.q-item")
