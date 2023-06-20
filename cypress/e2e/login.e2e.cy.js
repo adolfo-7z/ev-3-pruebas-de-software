@@ -17,7 +17,10 @@ describe("Login E2E", () => {
 		cy.get('input[id="login-password"]').type("2aSsword95%");
 		cy.get('button[id="login-submit"]').click();
 
-		cy.get("div").find(".q-notification").should("be.visible").and("contain.text", "invalid credentials");
+		cy.get("div")
+		.find(".q-notification")
+		.should("be.visible")
+		.and("contain.text", "invalid credentials");
 	});
 
 	it("L-4 Correct login", () => {
@@ -37,8 +40,13 @@ describe("Login E2E", () => {
 		cy.get('input[id="login-password"]').type("CheCopete123%");
 		cy.get('button[id="login-submit"]').click();
 
-		cy.url().should("eq", `${Cypress.config().baseUrl}/verify?verify_error=1`);
-		cy.get("div").find(".q-notification").should("be.visible").and("contain.text", "You need to verify your account");
+		cy.url()
+		.should("eq", `${Cypress.config().baseUrl}/verify?verify_error=1`);
+		
+		cy.get("div")
+		.find(".q-notification")
+		.should("be.visible")
+		.and("contain.text", "You need to verify your account");
 	});
 
 });
