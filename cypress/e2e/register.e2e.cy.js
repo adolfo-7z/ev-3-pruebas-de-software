@@ -8,6 +8,8 @@ describe("Register E2E", () => {
         cy.get('input[aria-label="Confirm the password"]').type("Rene12345%");
 		cy.get('button[id="register-submit"]').click();
 
+		cy.wait(4000);
+
         cy.url()
 		.should("eq", `${Cypress.config().baseUrl}/login`);
 
