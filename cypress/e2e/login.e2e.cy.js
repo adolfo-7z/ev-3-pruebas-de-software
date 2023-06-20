@@ -2,7 +2,7 @@ describe("Login E2E", () => {
 	it("L-2 Login incorrect", () => {
 		cy.visit("/login");
 		cy.get('input[id="login-email"]').type("john@example.com");
-		cy.get('input[id="login-password"]').type("john@example.com");
+		cy.get('input[id="login-password"]').type("asdasdasdasdasd");
 		cy.get('button[id="login-submit"]').click();
 
 		cy.get("div")
